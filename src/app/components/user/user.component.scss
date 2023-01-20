@@ -1,0 +1,84 @@
+.users {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 64px);
+  .user__header {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+
+    .user__header__search {
+      font-size: 15px;
+      margin-top: 12px;
+    }
+  }
+  .users-table-container {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    height: calc(100vh - 64px - 50px);
+
+    .users-table {
+      width: auto;
+      overflow: auto;
+      flex: 1;
+
+      mat-paginator.mat-paginator {
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 56px;
+        border-top: 1px solid #e0e0e0;
+        background-color: transparent;
+        z-index: 10;
+      }
+
+      table {
+        width: auto;
+      }
+
+      .mat-column-id {
+        padding: 0 16px;
+        min-width: 250px;
+        border-right: 1px solid #e0e0e0;
+      }
+      .mat-column-name {
+        padding: 0 16px;
+        min-width: 250px;
+      }
+      .mat-column-email {
+        padding: 0 16px;
+        min-width: 250px;
+      }
+      .mat-column-phone {
+        padding: 0 16px;
+        min-width: 250px;
+      }
+      .mat-column-position {
+        padding: 0 16px;
+        min-width: 250px;
+      }
+      .mat-column-gender {
+        padding: 0 16px;
+        min-width: 250px;
+      }
+      .mat-column-introduce {
+        padding: 0 16px;
+        min-width: 300px;
+      }
+      .mat-column-action {
+        padding: 0 16px;
+        min-width: 250px;
+        border-left: 1px solid #e0e0e0;
+
+        .delete {
+          margin-left: 8px;
+        }
+      }
+    }
+  }
+}

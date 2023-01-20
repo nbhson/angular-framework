@@ -1,0 +1,80 @@
+<div class="add__user">
+  <form *ngIf="form" [formGroup]="form">
+    <h2 mat-dialog-title>New User</h2>
+    <mat-dialog-content>
+      <mat-form-field [style.width.%]="100" appearance="outline">
+        <mat-label>Name</mat-label>
+        <input
+          [(ngModel)]="user.name"
+          type="text"
+          autocomplete="off"
+          required
+          matInput
+          placeholder="Enter name"
+          formControlName="name"
+        />
+        <mat-error *ngIf="f['name'].errors">
+          <div *ngIf="f['name'].errors['required']">Name is required!</div>
+          <div *ngIf="f['name'].errors['minlength']">Name is short!</div>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field [style.width.%]="100" appearance="outline">
+        <mat-label>Email</mat-label>
+        <input
+          [(ngModel)]="user.email"
+          type="email"
+          autocomplete="off"
+          required
+          matInput
+          placeholder="Enter email"
+          formControlName="email"
+        />
+        <mat-error *ngIf="f['email'].errors">
+          <div *ngIf="f['email'].errors['required']">Email is required!</div>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field [style.width.%]="100" appearance="outline">
+        <mat-label>Phone</mat-label>
+        <input
+          [(ngModel)]="user.phone"
+          type="text"
+          autocomplete="off"
+          required
+          matInput
+          placeholder="Enter phone"
+          formControlName="phone"
+        />
+        <mat-error *ngIf="f['phone'].errors">
+          <div *ngIf="f['phone'].errors['required']">Phone is required!</div>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field [style.width.%]="100" appearance="outline">
+        <mat-label>Select an option</mat-label>
+        <mat-select required [(value)]="user.gender">
+          <mat-option value="Male">Male</mat-option>
+          <mat-option value="Female">Female</mat-option>
+        </mat-select>
+        <mat-error *ngIf="f['gender'].errors">
+          <div *ngIf="f['gender'].errors['required']">Phone is required!</div>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field [style.width.%]="100" appearance="outline">
+        <mat-label>Introduce</mat-label>
+        <textarea matInput placeholder="Textarea"></textarea>
+      </mat-form-field>
+    </mat-dialog-content>
+    <mat-dialog-actions class="cs-pt-3 cs-pb-3">
+      <div>
+        <button mat-button mat-dialog-close>Close</button>
+        <button
+          mat-button
+          mat-raised-button
+          color="primary"
+          (click)="submit()"
+        >
+          Create
+        </button>
+      </div>
+    </mat-dialog-actions>
+  </form>
+</div>

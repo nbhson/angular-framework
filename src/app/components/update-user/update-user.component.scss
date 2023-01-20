@@ -1,0 +1,19 @@
+.update__user {
+    width: 100%;
+    height: calc(100vh - 64px);
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+        margin-bottom: 32px;
+        text-align: center;
+    }
+
+    mat-dialog-actions.mat-dialog-actions {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
