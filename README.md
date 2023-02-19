@@ -13,6 +13,11 @@
 
 ## Exercise:
 
+> To understand the architecture of Angular
+
+- The update function must show the user when reloading the user update page
+- The delete function ability remove the user from the table right away
+
 > To understand the workflow of MVVM
 
 - Complete update function
@@ -22,5 +27,4 @@
 
 > To flexibility in handling and binding data
 
-- The update function must show the user when reloading the user update page
-- The delete function ability remove the user from the table right away
+- Use Pipe to complete search function
